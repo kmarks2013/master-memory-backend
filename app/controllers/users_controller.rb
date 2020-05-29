@@ -27,4 +27,10 @@ class UsersController < ApplicationController
         user.destroy
         render json: {}
     end
+
+    private
+
+    def user_params
+        params.permit(:name, :age, :username, :password, :email)
+    end
 end
