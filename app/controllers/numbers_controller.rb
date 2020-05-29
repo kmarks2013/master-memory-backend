@@ -5,5 +5,6 @@ class NumbersController < ApplicationController
 
     def show
         number = Number.find(params[:id])
+        render json:number
     end
 end
