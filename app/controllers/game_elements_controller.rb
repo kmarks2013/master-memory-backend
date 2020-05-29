@@ -1,0 +1,2 @@
+class GameElementsController < ApplicationController
+end
