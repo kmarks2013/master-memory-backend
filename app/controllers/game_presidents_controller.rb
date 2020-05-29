@@ -1,0 +1,2 @@
+class GamePresidentsController < ApplicationController
+end
