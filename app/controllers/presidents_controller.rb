@@ -1,5 +1,4 @@
 class PresidentsController < ApplicationController
-    # Show, index
     def index
         render json: President.all
     end
@@ -8,5 +7,4 @@ class PresidentsController < ApplicationController
         president = President.find(params[:id])
         render json: president
     end
-
 end
