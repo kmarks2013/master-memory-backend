@@ -8,4 +8,9 @@ class ScoresController < ApplicationController
         render json: score
     end
 
+    def create
+        score = Score.create(score_params)
+        render json: score
+    end
+
 end
