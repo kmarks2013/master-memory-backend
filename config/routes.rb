@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :countries
   resources :game_numbers
   resources :numbers
   resources :games
