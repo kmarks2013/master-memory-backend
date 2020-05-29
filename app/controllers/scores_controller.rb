@@ -3,4 +3,9 @@ class ScoresController < ApplicationController
         render json: Score.all
     end
 
+    def show
+        score = score.find(params[:id])
+        render json: score
+    end
+
 end
