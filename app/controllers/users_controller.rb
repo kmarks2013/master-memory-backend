@@ -21,4 +21,10 @@ class UsersController < ApplicationController
             render json: {error: "You don't have permission to update this account."}
         end
     end
+
+    def destroy
+        user = User.find(params[:id])
+        user.destroy
+        render json: {}
+    end
 end
