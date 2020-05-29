@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :game_presidents
   resources :presidents
   resources :game_countries
   resources :countries
