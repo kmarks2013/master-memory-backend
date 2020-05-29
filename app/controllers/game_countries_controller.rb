@@ -1,0 +1,2 @@
+class GameCountriesController < ApplicationController
+end
