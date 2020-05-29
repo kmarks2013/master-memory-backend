@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :game_elements
   resources :elements
   resources :game_presidents
   resources :presidents
