@@ -18,5 +18,4 @@ class ScoresController < ApplicationController
     def score_params
         params.permit(:point, :game_id)
     end
-
 end
