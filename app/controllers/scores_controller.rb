@@ -13,4 +13,10 @@ class ScoresController < ApplicationController
         render json: score
     end
 
+    private
+
+    def score_params
+        params.permit(:point, :game_id)
+    end
+
 end
