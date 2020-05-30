@@ -11,3 +11,15 @@ President.reset_pk_sequence
 country_json = RestClient.get('https://restcountries.eu/rest/v2/all')
 
 country_hash = JSON.parse(country_json)
+
+country_hash.each do |country|
+    Country.create(
+        name: country["name"],
+        flag_url: country["flag"],
+        region: country["region"],
+        sub_region: country["subregion"],
+        population: country["population"],
+        language: country["languages"][0]["name"],
+        capital: country["capital"]
+    )
+end
