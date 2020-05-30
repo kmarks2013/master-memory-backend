@@ -9,3 +9,5 @@ Country.reset_pk_sequence
 President.reset_pk_sequence
 
 country_json = RestClient.get('https://restcountries.eu/rest/v2/all')
+
+country_hash = JSON.parse(country_json)
