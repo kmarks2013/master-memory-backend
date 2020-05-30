@@ -4,18 +4,18 @@ class GameCountriesController < ApplicationController
     end
 
     def show
-        game = Game.find(params[:id])
-        render json:game
+        game_country = GameCountry.find(params[:id])
+        render json:game_country
     end
 
     def create
-        game = Game.create(game_params)
-        render json: game
+        game_country = GameCountry.create(game_country_params)
+        render json: game_country
     end
 
     def destroy
-        game = Game.find([:id])
-        game.destroy
+        game_country = GameCountry.find([:id])
+        game_country.destroy
     end
 
     private
