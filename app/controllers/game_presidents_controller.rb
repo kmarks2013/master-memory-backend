@@ -7,4 +7,9 @@ class GamePresidentsController < ApplicationController
         game_president = GamePresident.find(params[:id])
         render json:game_president
     end
+
+    def create
+        game_president = GamePresident.create(game_president_params)
+        render json: game_president
+    end
 end
