@@ -1,11 +1,25 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all #delete this later
+Game.destroy_all  #delete this later
+Country.destroy_all
+President.destroy_all
 
-President.create(name:'Derya Tanriverdi', term: "2020-2028", party:"Democrat", president_order:46)
+User.reset_pk_sequence
+Game.reset_pk_sequence
+Country.reset_pk_sequence
+President.reset_pk_sequence
 
-puts "test president"
+country_json = RestClient.get('https://restcountries.eu/rest/v2/all')
+
+country_hash = JSON.parse(country_json)
+
+country_hash.each do |country|
+    Country.create(
+        name: country["name"],
+        flag_url: country["flag"],
+        region: country["region"],
+        sub_region: country["subregion"],
+        population: country["population"],
+        language: country["languages"][0]["name"],
+        capital: country["capital"]
+    )
+end
