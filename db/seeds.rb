@@ -1,11 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all #delete this later
+Game.destroy_all  #delete this later
+Country.destroy_all
+President.destroy_all
 
-President.create(name:'Derya Tanriverdi', term: "2020-2028", party:"Democrat", president_order:46)
-
-puts "test president"
