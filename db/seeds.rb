@@ -23,3 +23,5 @@ country_hash.each do |country|
         capital: country["capital"]
     )
 end
+
+element_json = RestClient.get('https://neelpatel05.pythonanywhere.com/')
