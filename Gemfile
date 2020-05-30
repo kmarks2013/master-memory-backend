@@ -18,6 +18,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rest-client'
 gem 'activerecord-reset-pk-sequence'
 gem 'active_model_serializers'
+gem "jwt"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
