@@ -12,4 +12,9 @@ class GamePresidentsController < ApplicationController
         game_president = GamePresident.create(game_president_params)
         render json: game_president
     end
+
+    def destroy
+        game_president = GamePresident.find([:id])
+        game_president.destroy
+    end
 end
