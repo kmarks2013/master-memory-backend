@@ -1,3 +1,3 @@
 class ContrySerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :flag_url, :region, :sub_region, :language, :capital, :population
 end
