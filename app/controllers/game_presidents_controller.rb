@@ -17,4 +17,10 @@ class GamePresidentsController < ApplicationController
         game_president = GamePresident.find([:id])
         game_president.destroy
     end
+
+    private
+
+    def game_president_params
+        params.permit(:game_id, :president_id)
+    end
 end
