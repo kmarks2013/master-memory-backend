@@ -47,3 +47,10 @@ element_hash.each do|element|
         year_discovered: element["yearDiscovered"]
     )
 end
+
+count = 1
+
+while count <= 12
+    Number.create(value: count)
+    count += 1
+end
