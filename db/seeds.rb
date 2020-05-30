@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+President.create(name:'Derya Tanriverdi', term: "2020-2028", party:"Democrat", president_order:46)
+
+puts "test president"
