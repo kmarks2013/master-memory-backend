@@ -25,3 +25,5 @@ country_hash.each do |country|
 end
 
 element_json = RestClient.get('https://neelpatel05.pythonanywhere.com/')
+
+element_hash = JSON.parse(element_json)
