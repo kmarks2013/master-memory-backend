@@ -17,4 +17,10 @@ class GameElementsController < ApplicationController
         game_element = GameElement.find([:id])
         game_element.destroy
     end
+
+    private
+
+    def game_element_params
+        params.permit(:game_id, :element_id)
+    end
 end
