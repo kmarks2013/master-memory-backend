@@ -17,4 +17,10 @@ class GameCountriesController < ApplicationController
         game = Game.find([:id])
         game.destroy
     end
+
+    private
+
+    def game_country_params
+        params.permit(:game_id, :country_id)
+    end
 end
