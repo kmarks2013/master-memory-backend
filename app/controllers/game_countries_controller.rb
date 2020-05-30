@@ -12,4 +12,9 @@ class GameCountriesController < ApplicationController
         game = Game.create(game_params)
         render json: game
     end
+
+    def destroy
+        game = Game.find([:id])
+        game.destroy
+    end
 end
