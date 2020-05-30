@@ -20,6 +20,6 @@ class GameNumbersController < ApplicationController
 
     private
     def game_numbers_params
-        params.permit(:game, :number)
+        params.permit(:game_id, :number_id)
     end
 end
