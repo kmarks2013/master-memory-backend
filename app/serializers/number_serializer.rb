@@ -1,3 +1,3 @@
 class NumberSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :value
 end
