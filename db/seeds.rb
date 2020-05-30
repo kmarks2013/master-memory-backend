@@ -27,3 +27,19 @@ end
 element_json = RestClient.get('https://neelpatel05.pythonanywhere.com/')
 
 element_hash = JSON.parse(element_json)
+
+element_hash.each do|element|
+    Element.create(
+        name: element["name"],
+        symbol: element["symbol"],
+        atomic_weight: element["atomicMass"],
+        atomic_number: element["atomicNumber"],
+        color: element["cpkHexColor"],
+        bonding_type: element["bondingType"],
+        group_block: element["groupBlock"],
+        standard_state: element["standardState"],
+        boiling_point: element["boilingPoint"],
+        melting_point: element["meltingPoint"],
+        year_discovered: element["yearDiscovered"]
+    )
+end
