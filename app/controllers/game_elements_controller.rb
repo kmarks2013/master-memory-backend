@@ -12,4 +12,9 @@ class GameElementsController < ApplicationController
         game_element = GameElement.create(game_element_params)
         render json: game_element
     end
+
+    def destroy
+        game_element = GameElement.find([:id])
+        game_element.destroy
+    end
 end
