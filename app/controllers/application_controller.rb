@@ -6,4 +6,8 @@ class ApplicationController < ActionController::API
     def user_payload(user)
         {user_id: user.id}
     end
+
+    def hmac_secret
+        "testing_key"
+    end
 end
