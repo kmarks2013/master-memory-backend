@@ -5,4 +5,5 @@ class User < ApplicationRecord
     has_many :numbers, through: :games
     has_many :ountries, through: :games
     has_many :presidents, through: :games
+    has_secure_password
 end
