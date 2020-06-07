@@ -10,7 +10,11 @@ class UsersController < ApplicationController
 
     def create
         user = User.create(user_params)
-        render json:user
+        if(user.valid?)
+            render json:user
+        else
+            render json: {errors: user.errors.full_messages}
+        end
     end
 
     def update
