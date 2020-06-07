@@ -33,6 +33,6 @@ class User < ApplicationRecord
     validates :password, format: {with: PASSWORD_SYMBOL_FORMAT, :message => "Password must include at least 1 special character."}
     validates :password, length: { in: 6..20 }
     validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
-    validates :password, confirmation: true
-    validates :password_confirmation, presence: true
+    # validates :password, confirmation: true
+    # validates :password_confirmation, presence: true
 end

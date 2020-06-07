@@ -8,7 +8,7 @@ class ApplicationController < ActionController::API
     end
 
     def hmac_secret
-        "testing_key"
+        Rails.application.credentials.secret_key
     end
 
     def current_user
