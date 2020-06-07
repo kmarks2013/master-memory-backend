@@ -17,6 +17,14 @@ class UsersController < ApplicationController
         end
     end
 
+    def profile
+        if current_user
+            render json:current_user
+        else
+            render json: {error: "User is not found"}
+        end
+    end
+
     def update
         user = User.find(params[:id])
         if user.update(user_params)
